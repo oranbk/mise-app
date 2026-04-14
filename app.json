@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Mise",
+    "slug": "mise",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0a0a0a"
+    },
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "com.mise.app",
+      "infoPlist": {
+        "NSMicrophoneUsageDescription": "Mise needs the microphone to listen to your voice commands while cooking.",
+        "NSCameraUsageDescription": "Mise needs the camera to scan recipes from photos.",
+        "NSPhotoLibraryUsageDescription": "Mise needs access to your photos to import recipe images.",
+        "UIBackgroundModes": ["audio"],
+        "GADApplicationIdentifier": "ca-app-pub-6902161296773045~8310549139"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0a0a0a"
+      },
+      "package": "com.mise.app",
+      "permissions": [
+        "RECORD_AUDIO",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE"
+      ]
+    },
+    "plugins": [
+      "expo-image-picker",
+      [
+        "react-native-google-mobile-ads",
+        {
+          "androidAppId": "ca-app-pub-6902161296773045~8310549139",
+          "iosAppId": "ca-app-pub-6902161296773045~8310549139"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "YOUR_EAS_PROJECT_ID"
+      }
+    }
+  }
+}
